@@ -45,11 +45,7 @@ export default define({
 			span: 'day',
 			limit: 7 * 21
 		}).then(activity => {
-			this.activity = activity.diffs.normal.map((_, i) => ({
-				total: activity.diffs.normal[i] + activity.diffs.reply[i] + activity.diffs.renote[i],
-				notes: activity.diffs.normal[i],
-				replies: activity.diffs.reply[i],
-				renotes: activity.diffs.renote[i]
+			
 			}));
 			this.fetching = false;
 		});
