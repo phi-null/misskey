@@ -91,11 +91,6 @@
 				<x-photos :user="user" :key="user.id"/>
 			</div>
 		</mk-container>
-		<mk-container :body-togglable="true" class="content">
-			<template #header></template>
-			<div style="padding:8px;">
-			</div>
-		</mk-container>
 		<x-user-timeline :user="user"/>
 	</template>
 </div>
