@@ -92,7 +92,7 @@
 			</div>
 		</mk-container>
 		<mk-container :body-togglable="true" class="content">
-			<template #header><fa :icon="faChartBar"/>{{ $t('activity') }}</template>
+			<template #header></template>
 			<div style="padding:8px;">
 				<x-activity :user="user" :key="user.id"/>
 			</div>
