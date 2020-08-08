@@ -40,14 +40,6 @@ export default Vue.extend({
 	},
 	methods: {
 		render() {
-			const peak = Math.max.apply(null, this.data.map(d => d.total));
-			if (peak != 0) {
-				const data = this.data.slice().reverse();
-				this.pointsNote = data.map((d, i) => `${(i * this.zoom) + this.pos},${(1 - (d.notes / peak)) * this.viewBoxY}`).join(' ');
-				this.pointsReply = data.map((d, i) => `${(i * this.zoom) + this.pos},${(1 - (d.replies / peak)) * this.viewBoxY}`).join(' ');
-				this.pointsRenote = data.map((d, i) => `${(i * this.zoom) + this.pos},${(1 - (d.renotes / peak)) * this.viewBoxY}`).join(' ');
-				this.pointsTotal = data.map((d, i) => `${(i * this.zoom) + this.pos},${(1 - (d.total / peak)) * this.viewBoxY}`).join(' ');
-			}
 		},
 		onMousedown(e) {
 			const clickX = e.clientX;
