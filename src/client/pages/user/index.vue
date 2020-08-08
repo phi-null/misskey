@@ -94,7 +94,6 @@
 		<mk-container :body-togglable="true" class="content">
 			<template #header></template>
 			<div style="padding:8px;">
-				<x-activity :user="user" :key="user.id"/>
 			</div>
 		</mk-container>
 		<x-user-timeline :user="user"/>
@@ -128,7 +127,6 @@ export default Vue.extend({
 		MkContainer,
 		MkRemoteCaution,
 		XPhotos: () => import('./index.photos.vue').then(m => m.default),
-		XActivity: () => import('./index.activity.vue').then(m => m.default),
 	},
 
 	metaInfo() {
