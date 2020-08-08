@@ -1,24 +1,5 @@
 <template>
-<div class="ukygtjoj _panel" :class="{ naked, hideHeader: !showHeader, scrollable }" v-size="[{ max: 500 }]">
-	<header v-if="showHeader">
-		<div class="title"><slot name="header"></slot></div>
-		<slot name="func"></slot>
-		<button class="_button" v-if="bodyTogglable" @click="() => showBody = !showBody">
-			<template v-if="showBody"><fa :icon="faAngleUp"/></template>
-			<template v-else><fa :icon="faAngleDown"/></template>
-		</button>
-	</header>
-	<transition name="container-toggle"
-		@enter="enter"
-		@after-enter="afterEnter"
-		@leave="leave"
-		@after-leave="afterLeave"
-	>
-		<div v-show="showBody">
-			<slot></slot>
-		</div>
-	</transition>
-</div>
+
 </template>
 
 <script lang="ts">
